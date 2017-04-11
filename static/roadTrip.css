@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+div.roadTrip {
+  background-color: #9E9E9E;
+}
+input {
+  max-width: 100%;
+}
+#map {
+    height: 100%;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left:0;
+
+  /*presevers bg aspect ratio*/
+  min-width:100%;
+  min-height:100%;
+}
+input.submitButton {
+  width: 100%;
+  background-color: #93794F;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000;
+  color: #FFF;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 3em;
+  font-family: 'Lobster', cursive;
+}
+input[type=text] {
+  max-width: 100%;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+label {
+  color: #FFF;
+}
+div.centerInfo {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: #336054;
+  padding: 35px;
+  display: block;
+  margin-top: 10px;
+}
