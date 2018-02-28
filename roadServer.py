@@ -26,7 +26,7 @@ def readySetGo(se):
 
 def getRoute(s,e):
     resp = req.get("https://maps.googleapis.com/maps/api/directions/json?"
-                    "origin={}&destination={}&key=AIzaSyCrwRulIzknvLKB_ZX9baK0Ao4B3245LAA".format(s,e))
+                    "origin={}&destination={}&key=[[[]]]".format(s,e))
     return resp.text
 
 def getWeather(locList):
@@ -35,18 +35,18 @@ def getWeather(locList):
 
     locKeyList = []
     for locat in locList:
-        resp1 = req.get("http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=XJdSipw5Kq9HU44GHfsTGHrypV6WQAN8&q={}%2C{}".format(locat[0],locat[1]))
+        resp1 = req.get("http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=[[[]]]&q={}%2C{}".format(locat[0],locat[1]))
         resp1JSON = json.loads(resp1.text)
         #print(resp1.text)
         locKeyList.append(resp1JSON["Key"])
 
     for i, locKey in enumerate(locKeyList):
         if locList[i][-1] > 720:
-            resp2 = req.get("http://dataservice.accuweather.com/forecasts/v1/daily/5day/{}?apikey=XJdSipw5Kq9HU44GHfsTGHrypV6WQAN8&details=true".format(locKey))
+            resp2 = req.get("http://dataservice.accuweather.com/forecasts/v1/daily/5day/{}?apikey=[[[]]]&details=true".format(locKey))
             weathList.append(json.loads(resp2.text))
 
         else:
-            resp2 = req.get("http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/{}?apikey=XJdSipw5Kq9HU44GHfsTGHrypV6WQAN8&details=true".format(locKey))
+            resp2 = req.get("http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/{}?apikey=[[[]]]&details=true".format(locKey))
             weathList.append(json.loads(resp2.text))
 
     #print(weathList)
